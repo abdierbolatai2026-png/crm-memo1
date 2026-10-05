@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Работа в CRM: быстрый старт</title>
+<style>
+:root{--bg:#f6f7f5;--card:#fff;--text:#22282a;--muted:#5d676b;--accent:#2f5d62;--line:#dfe3e1;--soft:#e8f0ef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171b1c;--card:#1f2527;--text:#e6eaea;--muted:#9aa5a8;--accent:#7fb7bb;--line:#2e3638;--soft:#263234}}
+:root[data-theme="dark"]{--bg:#171b1c;--card:#1f2527;--text:#e6eaea;--muted:#9aa5a8;--accent:#7fb7bb;--line:#2e3638;--soft:#263234}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.6rem;line-height:1.25;margin:8px 0 6px}
+h2{font-size:1.15rem;margin:0 0 12px;color:var(--accent)}
+p{margin:0 0 8px}
+.muted{color:var(--muted)}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px}
+.badge{display:inline-block;background:var(--soft);color:var(--accent);border-radius:999px;padding:2px 12px;font-size:.85rem}
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 14px 44px}
+ol.steps li:last-child{padding-bottom:0}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:600}
+ol.steps b{display:block}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.check label:last-of-type{border-bottom:0}
+.check input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent);flex:none}
+.progress{font-size:.9rem;color:var(--muted);margin-top:8px}
+.contact{background:var(--soft);border-radius:8px;padding:12px 14px}
+.contact div{margin:2px 0}
+</style>
+</head>
+<body>
+<main>
+  <span class="badge">Чтение: ~15 минут</span>
+  <h1>Добро пожаловать в команду продаж</h1>
+  <p class="muted">Эта страница поможет быстро освоить правила работы в CRM. Всё, что не записано в CRM, для команды не существует — на этом строится наша работа.</p>
+
+  <section>
+    <h2>Приветствие</h2>
+    <p>Рады, что вы с нами. В первые недели не нужно знать всё: достаточно придерживаться пяти шагов ниже и вести данные аккуратно.</p>
+    <p>Если что-то непонятно — спрашивайте наставника. Вопросы в первые недели считаются нормой, а не слабостью.</p>
+  </section>
+
+  <section>
+    <h2>5 шагов работы с клиентом</h2>
+    <ol class="steps">
+      <li><b>Создайте карточку</b>Внесите контакт сразу после первого касания: имя, компания, источник, телефон или email. Сначала проверьте поиском, нет ли дубля.</li>
+      <li><b>Зафиксируйте потребность</b>Кратко запишите, что нужно клиенту, бюджет, сроки и кто принимает решение. Пишите фактами, без догадок.</li>
+      <li><b>Назначьте следующий шаг</b>У каждой активной сделки должна быть задача с датой. Сделка без следующего шага считается потерянной.</li>
+      <li><b>Ведите историю общения</b>После каждого звонка или письма добавляйте заметку в тот же день: о чём договорились и что дальше.</li>
+      <li><b>Обновляйте стадию и закрывайте сделку</b>Двигайте сделку по воронке только по факту. При закрытии выберите результат и укажите причину, особенно если сделка проиграна.</li>
+    </ol>
+  </section>
+
+  <section class="check">
+    <h2>Чек-лист первого дня</h2>
+    <label><input type="checkbox"><span>Получил доступ к CRM и вошёл в аккаунт</span></label>
+    <label><input type="checkbox"><span>Настроил профиль и уведомления</span></label>
+    <label><input type="checkbox"><span>Прочитал эту страницу целиком</span></label>
+    <label><input type="checkbox"><span>Создал тестовую карточку клиента вместе с наставником</span></label>
+    <label><input type="checkbox"><span>Поставил задачу с датой следующего шага</span></label>
+    <label><input type="checkbox"><span>Добавил заметку о звонке или встрече</span></label>
+    <label><input type="checkbox"><span>Договорился с наставником о первой встрече</span></label>
+    <div class="progress" id="progress" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <h2>Контакты наставника</h2>
+    <div class="contact">
+      <div><b>Имя:</b> [Имя Фамилия]</div>
+      <div><b>Телефон / мессенджер:</b> [+7 ___ ___-__-__]</div>
+      <div><b>Email:</b> [mentor@company.com]</div>
+      <div><b>Когда на связи:</b> [будни, 9:00–18:00]</div>
+    </div>
+    <p class="muted" style="margin-top:10px">Если наставник недоступен, напишите руководителю отдела продаж.</p>
+  </section>
+</main>
+<script>
+(function(){
+  var boxes=document.querySelectorAll('.check input'),out=document.getElementById('progress'),key='crm-onb-checks';
+  var saved=[];
+  try{saved=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){saved=[]}
+  boxes.forEach(function(b,i){b.checked=!!saved[i];b.addEventListener('change',update)});
+  function update(){
+    var st=[],n=0;
+    boxes.forEach(function(b){st.push(b.checked);if(b.checked)n++});
+    try{localStorage.setItem(key,JSON.stringify(st))}catch(e){}
+    out.textContent='Выполнено: '+n+' из '+boxes.length+(n===boxes.length?' — отлично, можно приступать к работе':'');
+  }
+  update();
+})();
+</script>
+</body>
+</html>
